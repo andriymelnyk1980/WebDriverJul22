@@ -41,13 +41,24 @@ public class WebTableExample {
 	}
 	
 	for(int row=1; row<=Rows.size();row++) {
+		
 		for(int col=1;col<=Columns.size();col++) {
-			WebElement cell = driver.findElement(By.xpath("//table[@id='customers']/tbody/tr[ " + row +" ]/*["+ col +"]"));
+			
+			WebElement cell = driver.findElement(By.xpath("//table[@id='customers']/tbody/tr[" + row + "]/*[" + col + "]"));
 			System.out.print(cell.getText() + "\t");
 		}
 		
 		System.out.println();
 	}
+
+	String Company = "Magazzini Alimentari Riuniti";
+	
+	String Xpath = "//td[text()='" + Company + "']/following-sibling::td[2]";
+	WebElement Country = driver.findElement(By.xpath(Xpath));
+	System.out.println("The country is " + Country.getText());
+
+
+			
 	
 	}
 	
