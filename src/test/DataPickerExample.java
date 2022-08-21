@@ -13,9 +13,11 @@ public class DataPickerExample {
 		
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.cleartrip.com/");
+		driver.get("https://www.dummyticket.com/dummy-ticket-for-visa-application/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+		
+	
 		
 	}
 
